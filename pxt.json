@@ -1,0 +1,25 @@
+{
+    "name": "aicustomblocks",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        ".vscode/settings.json",
+        ".vscode/tasks.json",
+        "AIBlocks.ts",
+        "README.md",
+        "test.ts"
+    ],
+    "public": true,
+    "targetVersions": {
+        "target": "1.5.49",
+        "targetId": "minecraft"
+    },
+    "supportedTargets": [
+        "minecraft"
+    ],
+    "preferredEditor": "tsprj",
+    "testfiles": [
+        "test.ts"
+    ]
+}
