@@ -137,7 +137,7 @@ namespace Input{
 }
 
 //% color="#4C97FF"
-namespace Datasets{
+namespace データセット{
 
     //% block="データセットを作成"
     //% handlerStatement=1
