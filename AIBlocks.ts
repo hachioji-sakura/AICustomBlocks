@@ -1,117 +1,117 @@
 enum datasetType {
-    //% block="historical"
+    //% block="過去データ"
     historical = 0,
-    //% block="current"
+    //% block="現在データ"
     current = 1,
-    //% block="live"
+    //% block="リアルタイムデータ"
     live = 2
 }
 
 enum ML {
-    //% block="supervised"
+    //% block="教師あり学習"
     supervised,
-    //% block="unsupervised"
+    //% block="教師なし学習"
     unsupervised,
-    //% block="semi-supervised"
+    //% block="半教師あり学習"
     semiSupervised,
-    //% block="reinforcment"
-    reinforcment
+    //% block="強化学習"
+    reinforcement
 }
 
 //% color="#8c800b"
 namespace Input{
 
-    //% block="location 1 picture data"
+    //% block="位置1の画像データ"
     export function location1PictureData_MT() {
         blocks.place(STONE, world(96, 61, -397));
     }
 
-    //% block="location 1 picture data"
+    //% block="位置1の画像データ"
     export function location1PictureData_MTB() {
         agent.move(FORWARD, 2)
     }
 
-    //% block="location 2 picture data"
+    //% block="位置2の画像データ"
     export function location2PictureData_MT() {
         blocks.place(STONE, world(96, 61, -396));
     }
 
-    //% block="location 2 picture data"
+    //% block="位置2の画像データ"
     export function location2PictureData_MTB() {
         agent.move(FORWARD, 2)
     }
 
-    //% block="location 3 picture data"
+    //% block="位置3の画像データ"
     export function location3PictureData_MT() {
         blocks.place(STONE, world(96, 61, -395));
     }
 
-    //% block="location 3 picture data"
+    //% block="位置3の画像データ"
     export function location3PictureData_MTB() {
         agent.move(FORWARD, 2)
     }
 
-    //% block="live sensor 1 data"
+    //% block="ライブセンサー1のデータ"
     export function sensor1_OO() {
         agent.move(FORWARD, 2)
     }
 
-    //% block="live sensor 2 data"
+    //% block="ライブセンサー2のデータ"
     export function sensor2_OO() {
         agent.move(FORWARD, 2)
     }
 
-    //% block="live sensor 3 data"
+    //% block="ライブセンサー3のデータ"
     export function sensor3_OO() {
         agent.move(FORWARD, 2)
     }
 
-    //% block="live sensor 4 data"
+    //% block="ライブセンサー4のデータ"
     export function sensor4_OO() {
         agent.move(FORWARD, 2)
     }
 
-    //% block="trap camera 1 data"
+    //% block="トラップカメラ1のデータ"
     export function trap1_PR() {
         agent.move(FORWARD, 2)
     }
 
-    //% block="trap camera 2 data"
+    //% block="トラップカメラ2のデータ"
     export function trap2_PR() {
         agent.move(FORWARD, 2)
     }
 
-    //% block="trap camera 3 data"
+    //% block="トラップカメラ3のデータ"
     export function trap3_PR() {
         agent.move(FORWARD, 2)
     }
 
-    //% block="get location 1 satellite data"
+    //% block="位置1の衛星データを取得"
     export function beacon1_SF() {
         agent.move(FORWARD, 1)
     }
 
-    //% block="get location 2 satellite data"
+    //% block="位置2の衛星データを取得"
     export function beacon2_SF() {
         agent.move(FORWARD, 1)
     }
 
-    //% block="get location 3 satellite data"
+    //% block="位置3の衛星データを取得"
     export function beacon3_SF() {
         agent.move(FORWARD, 1)
     }
 
-    //% block="get location 4 satellite data"
+    //% block="位置4の衛星データを取得"
     export function beacon4_SF() {
         agent.move(FORWARD, 1)
     }
 
-    //% block="get location 5 satellite data"
+    //% block="位置5の衛星データを取得"
     export function beacon5_SF() {
         agent.move(FORWARD, 1)
     }
 
-    //% block="control satellite"
+    //% block="衛星を制御"
     //% handlerStatement=1
     export function runSatelite_SF(handler: () => void) {
             let i = 0
@@ -120,17 +120,17 @@ namespace Input{
         }
     }
 
-    //% block="location 1 water data"
+    //% block="位置1の水質データ"
     export function waterData1_WQ() {
         agent.move(FORWARD, 2)
     }
 
-    //% block="location 2 water data"
+    //% block="位置2の水質データ"
     export function waterData2_WQ() {
         agent.move(FORWARD, 2)
     }
 
-    //% block="location 3 water data"
+    //% block="位置3の水質データ"
     export function waterData3_WQ() {
         agent.move(FORWARD, 2)
     }
@@ -139,14 +139,14 @@ namespace Input{
 //% color="#4C97FF"
 namespace Datasets{
 
-    //% block="make dataset"
+    //% block="データセットを作成"
     //% handlerStatement=1
     export function setOfData_MT(handler: () => void) {
         blocks.place(STONE, world(96, 61, -398));
         handler();
     }
 
-    //% block="make dataset"
+    //% block="データセットを作成"
     //% handlerStatement=1
     export function setOfData_MTB(handler: () => void) {
         let i = 0
@@ -155,7 +155,7 @@ namespace Datasets{
         }
     }
 
-    //% block="make %type| dataset"
+    //% block="%type|データセットを作成"
     //% handlerStatement=1
     export function setOfData_OO(type: datasetType, handler: () => void) {
         if(type == 2){
@@ -166,7 +166,7 @@ namespace Datasets{
         }
     }
 
-    //% block="make %type| dataset"
+    //% block="%type|データセットを作成"
     //% handlerStatement=1
     export function setOfData_SF(type: datasetType, handler: () => void){
         if(type == 1){
@@ -177,12 +177,12 @@ namespace Datasets{
         }
     }
 
-    //% block="transfer data"
+    //% block="データを転送"
     export function transferData(){
         agent.move(UP, 6)
     }
 
-    //% block="make %type| dataset"
+    //% block="%type|データセットを作成"
     //% handlerStatement=1
     export function setOfData_PR(type: datasetType, handler: () => void) {
         if(type == 0){
@@ -193,7 +193,7 @@ namespace Datasets{
         }
     }
 
-    //% block="make %type| dataset"
+    //% block="%type|データセットを作成"
     //% handlerStatement=1
     export function setOfData_WQ(type: datasetType, handler: () => void) {
         if(type == 1){
@@ -204,55 +204,55 @@ namespace Datasets{
         }
     }
 
-    //% block="extract patterns"
+    //% block="パターンを抽出"
     export function extractPatterns_PR() {
         agent.move(LEFT, 4)
     }
 
-    //%block="current dataset"
+    //%block="現在データセット"
     export function currentData():number{
         return 0
     }
 
-    //%block="historical dataset"
+    //%block="過去データセット"
     export function historicalData():number{
         return 0
     }
 
-    //%block="live dataset"
+    //%block="ライブデータセット"
     export function liveData():number{
         let i = 2
         return i
     }
 
-    //% block="input dataset"
+    //% block="データセットを入力"
     export function input_MT() {
     blocks.place(STONE, world(110, 61, -397));
     }
 
-    //% block="input dataset"
+    //% block="データセットを入力"
     export function input_MTB() {
     agent.move(FORWARD, 2)
     }
 
-    //% block="input datasets"
+    //% block="データセットを入力"
     export function input_PR() {
     agent.move(RIGHT, 2)
     }
 
-    //% block="input datasets"
+    //% block="データセットを入力"
     export function input_SF() {
     agent.move(RIGHT, 2)
     }
 
-    //% block="input %type| dataset"
+    //% block="%type|データセットを入力"
     export function input_OO(type: datasetType){
         if(type == 2){
            agent.move(FORWARD, 3)
         }
     }
 
-    //% block="compare %type0| dataset against %type1|"
+    //% block="%type0|データセットを%type1|と比較"
     //% handlerStatement=1
     export function compare_PR(type0: datasetType, type1: datasetType) {
         if(type0==1 && type1==0){
@@ -260,7 +260,7 @@ namespace Datasets{
         }
     }
 
-    //% block="compare %type0| dataset against %type1|"
+    //% block="%type0|データセットを%type1|と比較"
     //% handlerStatement=1
     export function compare_SF(type0: datasetType, type1: datasetType) {
         if(type0==1 && type1==0){
@@ -268,7 +268,7 @@ namespace Datasets{
         }
     }
 
-    //% block="input %type| dataset"
+    //% block="%type|データセットを入力"
     export function input_WQ(type: datasetType){
         if(type == 1){
            agent.move(FORWARD, 3)
@@ -280,14 +280,14 @@ namespace Datasets{
 //% color="#8332A8"
 namespace AI {
 
-    //% block="unsupervised machine learning"
+    //% block="教師なし機械学習"
     //% handlerStatement=1
     export function ml_MT(handler: () => void) {
         blocks.place(STONE, world(110, 61, -398));
         handler();
     }
 
-    //% block="unsupervised machine learning"
+    //% block="教師なし機械学習"
     //% handlerStatement=1
     export function ml_MTB(handler: () => void) {
         let i = 0
@@ -296,7 +296,7 @@ namespace AI {
         }
     }
 
-    //% block="semi-supervised machine learning"
+    //% block="半教師あり機械学習"
     //% handlerStatement=1
     export function ml_SF(handler: () => void) {
         let i = 0
@@ -305,7 +305,7 @@ namespace AI {
         }
     }
 
-    //% block="semi-supervised machine learning"
+    //% block="半教師あり機械学習"
     //% handlerStatement=1
     export function ml_PR(handler: () => void) {
         let i = 0
@@ -314,7 +314,7 @@ namespace AI {
         }
     }
 
-    //% block="supervised machine learning"
+    //% block="教師あり機械学習"
     //% handlerStatement=1
     export function ml_WQ(handler: () => void) {
         let i = 0
@@ -323,22 +323,22 @@ namespace AI {
         }
     }
 
-    //% block="analyze water data"
+    //% block="水質データを解析"
     export function analyze_WQ(){
         agent.move(RIGHT, 2)
     }
     
-    //% block="analyze data"
+    //% block="データを解析"
     export function analyze_MT(){
         blocks.place(STONE, world(110, 61, -396));
     }
 
-    //% block="analyze data"
+    //% block="データを解析"
     export function analyze_MTB(){
         agent.move(RIGHT, 3)
     }
 
-    //% block="machine learning"
+    //% block="機械学習"
     //% handlerStatement=1
     export function ml_OO(handler: () => void) {
         let i = 0
@@ -347,29 +347,29 @@ namespace AI {
         }
     }
 
-    //% block="autonomous navigation algorithm"
+    //% block="自律ナビゲーションアルゴリズム"
     //% handlerStatement=1
     export function ml_OO2(handler: () => void) {
         agent.move(DOWN, 5)
         handler();
     }
 
-    //% block="analyze terrain data"
+    //% block="地形データを解析"
     export function analyze_OO(){
         agent.move(LEFT, 1)
     }
 
-    //% block="generate routes"
+    //% block="ルートを生成"
     export function genRoutes_OO(){
         agent.move(RIGHT, 2)
     }
 
-    //% block="analyze pattern data"
+    //% block="パターンデータを解析"
     export function analyze_PR(){
         agent.move(LEFT, 3)
     }
 
-    //% block="run predictive analysis"
+    //% block="予測分析を実行"
     export function analyze_SF(){
         agent.move(LEFT, 3)
     }
@@ -379,12 +379,12 @@ namespace AI {
 //% color="#2d854e"
 namespace Output {
 
-    //% block="Agent reach sensor 1"
+    //% block="エージェントがセンサー1に到達"
     export function reach1_OO() {
         agent.move(DOWN, 5)
     }
 
-    //% block="Agent reach sensor 2"
+    //% block="エージェントがセンサー2に到達"
     export function reach2_OO() {
         agent.move(FORWARD, 24)
         agent.move(RIGHT, 7)
@@ -393,12 +393,12 @@ namespace Output {
         agent.teleport(world(679, 61, 96), 180)
     }
 
-    //% block="Agent reach sensor 3"
+    //% block="エージェントがセンサー3に到達"
     export function reach3_OO() {
         agent.move(DOWN, 5)
     }
 
-    //% block="Agent reach sensor 4"
+    //% block="エージェントがセンサー4に到達"
     export function reach4_OO() {
         agent.move(RIGHT, 32)
         agent.move(DOWN, 12)
@@ -407,27 +407,27 @@ namespace Output {
         agent.teleport(world(679, 61, 96), 180)
     }
 
-    //% block="show locations"
+    //% block="位置を表示"
     export function showLocations_MT(){
         blocks.place(STONE, world(110, 61, -395));
     }
 
-    //% block="show locations"
+    //% block="位置を表示"
     export function showLocations_MTB(){
         agent.move(BACK, 1)
     }
 
-    //% block="locate ocelots"
+    //% block="オセロットを発見"
     export function locateOcelots_PR(){
         agent.move(RIGHT, 4)
     }
 
-    //% block="find best farming locations"
+    //% block="最適な農業地を発見"
     export function locateFarm_SF(){
         agent.move(RIGHT, 4)
     }
 
-    //% block="locate pollution sources"
+    //% block="汚染源を発見"
     export function locatePollution_WQ(){
         agent.move(LEFT, 3)
     }
@@ -436,7 +436,7 @@ namespace Output {
 //% color="#ED82B6"
 namespace Test{
 
-    //% block="test loop"
+    //% block="テストループ"
     //% handlerStatement=1
     export function testLoop(handler: () => void) {
         let i = 0
@@ -445,7 +445,7 @@ namespace Test{
         }
     }
 
-    //%block="test moves"
+    //%block="テスト移動"
     export function testMoves(){
         agent.move(FORWARD, 2)
         agent.turn(TurnDirection.Left)
