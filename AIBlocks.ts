@@ -18,7 +18,7 @@ enum ML {
     reinforcement
 }
 
-//% color="#8c800b"
+//% color="#8c800b" block="入力"
 namespace Input{
 
     //% block="位置1の画像データ"
@@ -136,8 +136,8 @@ namespace Input{
     }
 }
 
-//% color="#4C97FF"
-namespace データセット{
+//% color="#4C97FF" block="データセット"
+namespace Datasets{
 
     //% block="データセットを作成"
     //% handlerStatement=1
@@ -376,7 +376,7 @@ namespace AI {
 
 }
 
-//% color="#2d854e"
+//% color="#2d854e" block="出力"
 namespace Output {
 
     //% block="エージェントがセンサー1に到達"
